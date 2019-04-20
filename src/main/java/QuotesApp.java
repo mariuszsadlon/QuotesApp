@@ -7,14 +7,11 @@ public class QuotesApp
     
     public static void main(String[] args)
     {
-        frame ruszamy = new frame();
-        ruszamy.frame();
-        
-        test testuje = new test();
-        testuje.frame();
+        frame app = new frame();
+        app.frame();
+    
     }
 }
-    
   
         
 
