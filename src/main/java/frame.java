@@ -33,12 +33,15 @@ public class frame implements ActionListener
         area.setEditable(false);
         area.setFocusable(false);
         
+        Font font = new Font("Helvetica", Font.ITALIC, 20);
+        area.setFont(font);
+        
         
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
         frame.getContentPane().add(BorderLayout.SOUTH, button);
         frame.getContentPane().add(BorderLayout.CENTER, area);
-        frame.setSize(300, 300);
+        frame.setSize(400, 400);
         frame.setVisible(true);
         
     }
