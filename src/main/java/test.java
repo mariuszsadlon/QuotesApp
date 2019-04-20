@@ -7,36 +7,39 @@ import java.util.Random;
 
 
 
-public class frame implements ActionListener
+public class test
 {
-    JButton button = new JButton("Next quote");
+   
     quotes quote = new quotes();
     JFrame frame = new JFrame();
-    JLabel label = new JLabel(quote.getQuote(), JLabel.CENTER);
     
     
     
     public void frame()
     {
+        JTextArea area = new JTextArea(quote.getQuote());
         
-        button.addActionListener(this);
+        area.setBounds(10,30,200,200);
+        area.setWrapStyleWord(true);
+        area.setLineWrap(true);
+        area.setOpaque(false);
+        area.setEditable(false);
+        area.setFocusable(false);
+        
+        frame.add(area);
+        
+        
+        
         
         
         
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
-        frame.getContentPane().add(BorderLayout.SOUTH, button);
-        frame.getContentPane().add(BorderLayout.CENTER, label);
         frame.setSize(500, 500);
         frame.setVisible(true);
         
     }
     
-    public void actionPerformed(ActionEvent zdarzenie)
-    {
-        String x = quote.getQuote();
-        label.setText(x);
-    }
     
     
 }

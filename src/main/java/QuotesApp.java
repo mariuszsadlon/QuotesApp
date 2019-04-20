@@ -9,6 +9,9 @@ public class QuotesApp
     {
         frame ruszamy = new frame();
         ruszamy.frame();
+        
+        test testuje = new test();
+        testuje.frame();
     }
 }
     
