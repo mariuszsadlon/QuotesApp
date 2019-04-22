@@ -11,14 +11,8 @@ public class quotes
     private String quote = null;
     private Random random = new Random();
     
-    
-    
-    
-    
     public  quotes() {
-        try
-    
-        {
+        try {
             URL url = getClass().getResource("quotesFile.txt");
             File quotesFile = new File(url.getPath());
             
@@ -31,31 +25,22 @@ public class quotes
             while((quotesLine = quotesBufferedReader.readLine()) != null)
             {
                 quotesList.add(quotesLine);
-            
             }
             quotesBufferedReader.close();
         }
         catch(
             Exception zd)
-    
         {
             zd.printStackTrace();
-        
         }
-    
-        
-        
-        
     }
     public String getQuote() {
         
         int number = 0;
         
-    
         number = random.nextInt(quotesList.size());
         
         quote = quotesList.get(number);
-        
         
         return quote;
     }

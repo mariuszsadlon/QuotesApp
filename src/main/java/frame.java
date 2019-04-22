@@ -6,24 +6,17 @@ import java.util.ArrayList;
 import java.util.Random;
 
 
-
 public class frame implements ActionListener
 {
-    JFrame frame = new JFrame();
+    private JFrame frame = new JFrame();
     
-    quotes quote = new quotes();
-   
-    //JLabel label = new JLabel(quote.getQuote(), JLabel.CENTER);
+    private quotes quote = new quotes();
     
-    JTextArea area = new JTextArea(quote.getQuote());
-    
-    
-    
+    private JTextArea area = new JTextArea(quote.getQuote());
     
     public void frame()
     {
         JButton button = new JButton("Next quote");
-        
         button.addActionListener(this);
     
         area.setBounds(10,30,100,100);
@@ -36,14 +29,11 @@ public class frame implements ActionListener
         Font font = new Font("Helvetica", Font.ITALIC, 20);
         area.setFont(font);
         
-        
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        
         frame.getContentPane().add(BorderLayout.SOUTH, button);
         frame.getContentPane().add(BorderLayout.CENTER, area);
         frame.setSize(400, 400);
         frame.setVisible(true);
-        
     }
     
     public void actionPerformed(ActionEvent zdarzenie)
@@ -51,7 +41,5 @@ public class frame implements ActionListener
         String x = quote.getQuote();
         area.setText(x);
     }
-    
-    
 }
 
